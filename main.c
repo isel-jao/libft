@@ -14,6 +14,6 @@
 
 int main(int argc, char const *argv[])
 {
-	ft_putendl("hello world");
+	ft_putendl("hello world lol");
 	return 0;
 }
