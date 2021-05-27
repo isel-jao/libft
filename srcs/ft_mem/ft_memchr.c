@@ -6,7 +6,7 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 17:56:07 by isel-jao          #+#    #+#             */
-/*   Updated: 2021/03/17 15:07:13 by isel-jao         ###   ########.fr       */
+/*   Updated: 2021/05/27 17:39:37 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	str = (unsigned char *)s;
 	while (n--)
+	{
 		if (*str != (unsigned char)c)
 			str++;
 		else
 			return (str);
+	}
 	return (NULL);
 }

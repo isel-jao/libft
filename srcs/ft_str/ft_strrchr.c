@@ -6,7 +6,7 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 22:30:17 by isel-jao          #+#    #+#             */
-/*   Updated: 2021/03/17 15:09:14 by isel-jao         ###   ########.fr       */
+/*   Updated: 2021/05/27 17:49:54 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *last;
+	char	*last;
 
 	last = (0);
 	while (*s)

@@ -6,13 +6,13 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 23:44:15 by isel-jao          #+#    #+#             */
-/*   Updated: 2021/03/17 15:09:17 by isel-jao         ###   ########.fr       */
+/*   Updated: 2021/05/27 17:50:19 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_set(char c, char const *set)
+int	is_set(char c, char const *set)
 {
 	while (*set)
 	{

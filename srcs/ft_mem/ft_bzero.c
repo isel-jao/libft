@@ -6,7 +6,7 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 13:58:25 by isel-jao          #+#    #+#             */
-/*   Updated: 2021/03/17 15:06:53 by isel-jao         ###   ########.fr       */
+/*   Updated: 2021/05/27 17:38:19 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *p;
+	unsigned char	*p;
 
 	p = s;
-	while ((int)--n >= 0)
+	while (--n >= 0)
 		*p++ = 0;
 }

@@ -6,7 +6,7 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 21:42:35 by isel-jao          #+#    #+#             */
-/*   Updated: 2021/03/17 15:09:02 by isel-jao         ###   ########.fr       */
+/*   Updated: 2021/05/27 17:48:40 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*result;
 
-	if (!s || !(result = malloc((ft_strlen((char *)s) + 1))))
+	if (!s)
 		return (NULL);
+	result = malloc((ft_strlen((char *)s) + 1));
 	ft_bzero(result, ft_strlen((char *)s) + 1);
 	i = 0;
 	while (s[i])

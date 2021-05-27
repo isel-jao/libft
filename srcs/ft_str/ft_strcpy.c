@@ -6,7 +6,7 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 02:38:35 by isel-jao          #+#    #+#             */
-/*   Updated: 2021/03/17 15:16:56 by isel-jao         ###   ########.fr       */
+/*   Updated: 2021/05/27 17:44:37 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	char *ret;
+	char	*ret;
 
 	ret = &(*dst);
 	while (*src)

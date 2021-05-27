@@ -6,7 +6,7 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 18:30:14 by isel-jao          #+#    #+#             */
-/*   Updated: 2021/04/05 23:21:02 by isel-jao         ###   ########.fr       */
+/*   Updated: 2021/05/27 17:56:49 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,6 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 16
 # endif
-
-typedef struct		s_lst
-{
-	void			*content;
-	struct s_lst	*next;
-	struct s_lst	*prev;
-}					t_lst;
 
 /*
 ** math
@@ -95,13 +88,6 @@ void				ft_putchar(char c);
 void				ft_putstr(char *s);
 void				ft_putendl(char *s);
 void				ft_putnbr(int i);
-
-/*
-** table
-*/
-void				**new_tab(size_t size);
-void				free_tab(void **tab);
-size_t				tab_len(void **tab);
 
 int					get_next_line(int fd, char **line);
 

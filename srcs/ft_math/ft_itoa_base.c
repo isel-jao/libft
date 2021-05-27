@@ -6,20 +6,24 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 23:18:53 by isel-jao          #+#    #+#             */
-/*   Updated: 2021/04/05 23:19:16 by isel-jao         ###   ########.fr       */
+/*   Updated: 2021/05/27 17:34:45 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#define ABS(v) ((v) < 0 ? -(v) : (v))
+
+static int	ft_abs(int a)
+{
+	if (a >= 0)
+		return (a);
+	return (-a);
+}
 
 void	aux(int n, int b, char *ans, int *p)
 {
-	char	base[] = "0123456789ABCDEF";
-
 	if (n <= -b || b <= n)
 		aux(n / b, b, ans, p);
-	ans[(*p)++] = base[ABS(n % b)];
+	ans[(*p)++] = "0123456789ABCDEF"[ft_abs(n % b)];
 }
 
 char	*ft_itoa_base(int value, int base)
@@ -27,9 +31,9 @@ char	*ft_itoa_base(int value, int base)
 	char	*ans;
 	int		p;
 
-	if (base < 2 || 16 < base
-		|| !(ans = (char *)malloc(sizeof(char) * 35)))
+	if (base < 2 || 16 < base)
 		return (NULL);
+	ans = (char *)malloc(sizeof(char) * 35);
 	p = 0;
 	if (base == 10 && value < 0)
 		ans[p++] = '-';

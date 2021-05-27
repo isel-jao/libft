@@ -6,7 +6,7 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 15:36:29 by isel-jao          #+#    #+#             */
-/*   Updated: 2021/03/17 15:07:04 by isel-jao         ###   ########.fr       */
+/*   Updated: 2021/05/27 17:38:59 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void *mem;
+	void	*mem;
 
-	if (!(mem = malloc(size)))
-		return (NULL);
+	mem = malloc(size);
 	ft_bzero(mem, size);
 	return (mem);
 }

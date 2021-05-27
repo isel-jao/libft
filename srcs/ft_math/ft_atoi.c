@@ -6,7 +6,7 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 15:29:52 by isel-jao          #+#    #+#             */
-/*   Updated: 2021/03/17 15:06:32 by isel-jao         ###   ########.fr       */
+/*   Updated: 2021/05/27 17:23:20 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	ft_atoi(const char *str)
 {
-	int res;
-	int b;
+	int	res;
+	int	b;
 
 	b = 1;
 	res = 0;
-	while (*str && (*str == ' ' || *str == '\n' || *str == '\t' ||
-					*str == '\v' || *str == '\f' || *str == '\r'))
+	while (*str && (*str == ' ' || *str == '\n' || *str == '\t' || \
+	*str == '\v' || *str == '\f' || *str == '\r'))
 		++str;
 	if (*str == '-')
 		b = -1;

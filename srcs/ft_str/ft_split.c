@@ -6,7 +6,7 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 18:30:17 by isel-jao          #+#    #+#             */
-/*   Updated: 2021/03/17 15:08:19 by isel-jao         ###   ########.fr       */
+/*   Updated: 2021/05/27 17:43:59 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 static void	*ft_malfree(char **tab, size_t size, int x)
 {
-	void *mem;
+	void	*mem;
 
-	if (!(mem = malloc(size)))
+	mem = malloc(size);
+	if (!mem)
 	{
 		while (x >= 0)
 		{
@@ -31,7 +32,7 @@ static void	*ft_malfree(char **tab, size_t size, int x)
 
 static int	word_count(char const *str, char ch)
 {
-	int x;
+	int	x;
 
 	x = 0;
 	while (*str != '\0')
@@ -50,7 +51,7 @@ static int	word_count(char const *str, char ch)
 
 static int	len(char const *str, char ch)
 {
-	int x;
+	int	x;
 
 	x = 0;
 	while (*str != ch && *str)
@@ -61,15 +62,16 @@ static int	len(char const *str, char ch)
 	return (++x);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		x;
 	int		y;
 	char	**tab;
 
 	x = 0;
-	if (!s || !(tab = malloc(sizeof(char *) * word_count(s, c))))
+	if (!s)
 		return (0);
+	tab = malloc(sizeof(char *) * word_count(s, c));
 	while (*s)
 	{
 		while (*s == c)
@@ -77,8 +79,7 @@ char		**ft_split(char const *s, char c)
 		if (*s != c && *s)
 		{
 			y = 0;
-			if (!(tab[x] = ft_malfree(tab, len(s, c), x)))
-				return (0);
+			tab[x] = ft_malfree(tab, len(s, c), x);
 			while (*s != c && *s)
 				tab[x][y++] = *s++;
 			tab[x][y] = '\0';

@@ -6,7 +6,7 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 02:42:30 by isel-jao          #+#    #+#             */
-/*   Updated: 2021/03/17 15:16:39 by isel-jao         ###   ########.fr       */
+/*   Updated: 2021/05/27 17:44:27 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	size_t i;
+	size_t	i;
 
 	if (!s1 || !s2)
 		return (-1);
