@@ -6,7 +6,7 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 20:32:03 by isel-jao          #+#    #+#             */
-/*   Updated: 2021/05/27 17:46:12 by isel-jao         ###   ########.fr       */
+/*   Updated: 2021/05/28 13:13:22 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 
 	if (!s1)
-		return ((char *)s2);
+		return (ft_strdup((char *)s2));
 	if (!s2)
-		return ((char *)s1);
+		return (ft_strdup((char *)s1));
 	i = (ft_strlen(s1) + ft_strlen(s2) + 1);
-	ret = ft_memalloc(i);
+	ret = malloc(i);
 	while (*s1)
 	{
 		*ret = *s1;

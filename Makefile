@@ -70,16 +70,12 @@ MATH		=	ft_atoi.c
 MATH		+=	ft_itoa.c 
 MATH		+=	ft_itoa_base.c 
 
-TAB		= new_tab.c
-TAB		+= free_tab.c
-TAB		+= tab_len.c
 
 SRC		=	$(addprefix ft_put/, $(PRINT))
 SRC		+=	$(addprefix ft_mem/, $(MEM))
 SRC		+=	$(addprefix ft_str/, $(STR))
 SRC		+=	$(addprefix char/, $(CHAR))
 SRC		+=	$(addprefix ft_math/, $(MATH))
-SRC		+=	$(addprefix tab/, $(TAB))
 SRC		+=	get_next_line.c 
 
 OBJ			=	$(addprefix $(OBJ_DIR),$(SRC:.c=.o))
