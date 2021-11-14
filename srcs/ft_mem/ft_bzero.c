@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
+/*   By: iseljao <iseljao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 13:58:25 by isel-jao          #+#    #+#             */
-/*   Updated: 2021/05/27 17:38:19 by isel-jao         ###   ########.fr       */
+/*   Updated: 2021/11/14 15:12:16 by iseljao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@ void	ft_bzero(void *s, size_t n)
 	unsigned char	*p;
 
 	p = s;
-	while (--n >= 0)
+	while (n > 0)
+	{
 		*p++ = 0;
+		n--;
+	}
 }
