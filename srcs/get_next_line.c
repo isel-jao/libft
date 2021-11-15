@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
+/*   By: iseljao <iseljao@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 15:04:07 by isel-jao          #+#    #+#             */
-/*   Updated: 2021/05/27 21:26:16 by isel-jao         ###   ########.fr       */
+/*   Updated: 2021/11/14 16:08:57 by iseljao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_rmp(char **new, int n, char **line, int fd)
+static int ft_rmp(char **new, int n, char **line, int fd)
 {
-	char	*temp;
-	int		i;
+	char *temp;
+	int i;
 
 	i = 0;
 	while (new[fd][i] && new[fd][i] != '\n')
@@ -41,24 +41,23 @@ static int	ft_rmp(char **new, int n, char **line, int fd)
 	return (-1);
 }
 
-int	get_next_line(int fd, char **line)
+int get_next_line(int fd, char **line)
 {
-	char		*buf;
-	static char	*oldline[4864];
-	char		*temp;
-	int			n;
+	char *buf;
+	static char *oldline[4864];
+	char *temp;
+	int n = 0;
 
 	buf = malloc(BUFFER_SIZE + 1);
-	if (!line || fd < 0 || fd >= 4864 || BUFFER_SIZE <= 0 || \
-	!buf || read(fd, buf, 0) == -1)
+	if (!line || fd < 0 || fd >= 4864 || BUFFER_SIZE <= 0 ||
+		!buf || read(fd, buf, 0) == -1)
 		return (-1);
 	if (!oldline[fd])
 		oldline[fd] = ft_strdup("");
-	while ((!ft_strchr(oldline[fd], '\n')))
+	n = 1;
+	while (n > 0 && (!ft_strchr(oldline[fd], '\n')))
 	{
 		n = read(fd, buf, BUFFER_SIZE);
-		if (n == 0)
-			break ;
 		if (n < 0)
 			return (-1);
 		temp = oldline[fd];
